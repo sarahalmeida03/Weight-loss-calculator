@@ -17,10 +17,10 @@ cc = int(input('How many calories a day do you want to eat? '))
 pph = (tmbh - cc) * 7 / 7700
 ppm = (tmbm - cc) * 7 / 7700
 
-mfsh = pp / pph
-mfsm = pp / ppm
+mfsh = wl / pph
+mfsm = wl / ppm
 
-if s == 'f':
-    print('In case you eat', cc, 'calories a day, your weekly weightloss will be: ', ppm, 'kg per week. You will reach your goal in', mfsm, 'weeks.')
-if s == 'm':
-    print('In case you eat', cc, 'calories a day, your weekly weightloss will be: ', pph, 'kg per week. You will reach your goal in', mfsh, 'weeks.')
+if g == 'f':
+    print('In case you eat {:.1f} calories a day, your weekly weightloss will be: {:.1f} kg per week. You will reach your goal in {:.1f} weeks.'.format(cc, ppm, mfsm))
+if g == 'm':
+    print('In case you eat {:.1f} calories a day, your weekly weightloss will be: {:.1f} kg per week. You will reach your goal in {:.1f} weeks.'.format(cc, pph, mfsh))
