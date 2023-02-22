@@ -1,0 +1,26 @@
+# Weight loss calculator
+cw = float(input('Type your weight in kg: '))
+gw = float(input('Type your goal weight in kg: '))
+wl = cw - gw
+a = int(input('Type your age in years: '))
+h = int(input('Type your height in cm: '))
+g = input('Type your gender as f or m: ')
+tmbh = 66 + (13.8 * cw) + (5 * h) - (6.8 * a)
+tmbm = 655 + (9.6 * cw) + (1.8 * h) - (4.7 * a)
+
+if g == 'f':
+    print('Your BMR is: ', tmbm, 'calories a day')
+if g == 'm':
+    print('Your BMR is: ', tmbh, 'calories a day')
+
+cc = int(input('How many calories a day do you want to eat? '))
+pph = (tmbh - cc) * 7 / 7700
+ppm = (tmbm - cc) * 7 / 7700
+
+mfsh = pp / pph
+mfsm = pp / ppm
+
+if s == 'f':
+    print('In case you eat', cc, 'calories a day, your weekly weightloss will be: ', ppm, 'kg per week. You will reach your goal in', mfsm, 'weeks.')
+if s == 'm':
+    print('In case you eat', cc, 'calories a day, your weekly weightloss will be: ', pph, 'kg per week. You will reach your goal in', mfsh, 'weeks.')
